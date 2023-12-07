@@ -90,7 +90,7 @@ system_info() {
     echo -e "\e[1;34m++++++++++++++++ SYSTEM ++++++++++++++++++\e[0m"
     echo -e "\e[1;36m+ Hostname = $(hostname)\e[0m"
     echo -e "\e[1;36m+ IP Address(es) = $(hostname -I | tr ' ' ', ')\e[0m"
-    echo -e "\e[1;36m+ Public IP = $(curl http://ifconfig.me/ip; echo)\e[0m"
+    echo -e "\e[1;36m+ Public IP = $(echo | curl -sS http://ifconfig.me/ip)\e[0m"
     echo -e "\e[1;36m+ OS = $(lsb_release -ds)\e[0m"
     echo -e "\e[1;36m+ Kernel = $(uname -r)\e[0m"
     echo -e "\e[1;36m+ Uptime = $(uptime -p)\e[0m"
